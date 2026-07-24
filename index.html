@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Geliştirici & Tasarımcı</title>
+    
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color:#f8fafc;
+
+}
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 8%;
+    background-color: rgba(15, 23, 42, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color:#a78bfa;
+}
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: #a78bfa;
+}
+
+#hero {
+    height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero-content {
+    max-width: 800px;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.highlight {
+    color:#a78bfa;
+}
+.hero-content p {
+font-size: 1rem;
+color: #94a3b8;
+margin-bottom: 30px;
+line-height: 1.6;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #a78bfa;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px ragba(167, 139, 250, 0.4);
+}
+.btn:hover {
+    transform: translatey(-3px);
+    box-shadow: 0 6px 20px ragba(167, 139, 250, 0.6);
+    background: #c084fc;
+}
+
+#projects {
+    padding: 80px 8%;
+    background-color: #0b0f19;
+    text-align: center;
+}
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #f8fafc;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    widht: 60px;
+    heght: 4px;
+    background-color: #a78bfa;
+    margin: 10px auto 0;
+    border-radius: 2px;
+
+}
+.project-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 20px;
+}
+.project-card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(167, 139, 250, 0.15);
+    border-color: rgba(167, 139, 250, 0.3);
+}
+.project-card h3 {
+    font-size:1.5rem;
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+.project-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.project-link {
+    color: #f8fafc;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+.project-link:hover {
+    color: #c084fc
+}
+#contact {
+    padding: 60px 8%;
+    background-color: #0f172a;
+    text-align: center;
+}
+</style>
+
+    <header>
+        <div class="logo">Portfolyom</div>
+        <nav>
+            <a href="#about">Hakkımda</a>
+            <a href="#projects">Projelerim</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Merhaba, <span class="highlight">Ben Bir Web Geliştiriciyim</span></h1>
+            <p>HTML, CSS ve modern tasraım dokunuşlarıyla web sitelerinizi güzelleştiriyor, kodlarınızı düzenliyor ve mobil uyumlu hale getiriyorum</p>
+            <a href="#projects" class="btn">Çalışmalarımı Gör</a>
+        </div>
+    </section>
+<!--Projeler Bölümü-->
+    <section id="projects">
+        <h2 class="section-title">Öne Çıkan Projelerim</h2>
+        <div class="projects-container">
+            <!-- proje 1 -->
+             <div class="project-card">
+                <h3>Özelleştirilmiş Landing page</h3>
+                <p>Bir ürün tanıtımı için hazırlanan, modern renk şeması ve özel css animasyonları içeren mobil uyumlu web sayfası.</p>
+                <a href="#" class="project-link">Projeyi İncele &rarr;</a>
+             </div>
+             <!-- proje 2 -->
+              <div class="project-card">
+                <h3>HTML/CSS Şablon Düzenleme</h3>
+                <p>Mevcut bir şablonu baştan sona Türkçeleştirilmesi, fontların optimize edilmesi ve arayüz hatalarının giderilmesi.</p>
+                <a href="#" class="project-link">Projeyi İncele &rarr;</a>
+              </div>
+              <!-- proje 3 -->
+               <div class="project-card">
+                <h3>Kişisel Portfolyo Sitesi</h3>
+                <p>Şu an incelemekte olduğunız, tamamen temiz kodlama ile yazılmış, hızlı ve şık  portfolyo tasrımı.</p>
+                <a href="#" class="project-link">Projeyi İncele &rarr;</a>
+               </div>
+        </div>
+    </section>
+    <!--İletişim Bölüm-->
+    <section id="contact">
+        <h2 class="section-title">İletişime Geçin</h2>
+        <a href="mailto:codeweb531@gmail.com" class="btn">E-posta Gönder</a>
+    </section>
+</body>
+</html>
